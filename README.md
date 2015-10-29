@@ -1,2 +1,2 @@
 # hear
-Command Line Ear Training Application writen in Haskell
+Command Line Ear Training Application written in Haskell
