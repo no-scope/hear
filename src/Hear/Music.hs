@@ -51,17 +51,6 @@ trans' :: Pitch -> Int -> Pitch
 trans' origPitch i = pitch $ absPitch origPitch + i
 
 
---solfej :: AbsPitch -> AbsPitch -> [AbsPitch]
---solfej x y
---  | y `elem` major = [z | z <- major, z <= max x y, z >= min x y]
---  | y `elem` minor = [z | z <- minor, z <= max x y, z >= min x y]
---  | otherwise = tonePath x y
---    where root = pitch x
---          pitchy = pitch y
---          major = trans flip majorScale
---          minor = trans minorScale
-
-
 toMusic :: [AbsPitch] -> Music Pitch
 toMusic = line . map (note (1/2) . pitch)
 
